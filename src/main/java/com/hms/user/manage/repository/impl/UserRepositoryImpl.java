@@ -1,5 +1,7 @@
-package com.hms.usermanagement;
+package com.hms.user.manage.repository.impl;
 
+import com.hms.user.manage.domain.User;
+import com.hms.user.manage.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -9,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class UserRepository implements UserDAO {
+public class UserRepositoryImpl implements UserRepository {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -61,6 +63,5 @@ public class UserRepository implements UserDAO {
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
-
     }
 }

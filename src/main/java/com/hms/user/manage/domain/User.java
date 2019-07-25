@@ -1,4 +1,4 @@
-package com.hms.usermanagement;
+package com.hms.user.manage.domain;
 
 public class User  {
 

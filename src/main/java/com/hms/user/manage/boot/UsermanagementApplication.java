@@ -1,4 +1,4 @@
-package com.hms.usermanagement;
+package com.hms.user.manage.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

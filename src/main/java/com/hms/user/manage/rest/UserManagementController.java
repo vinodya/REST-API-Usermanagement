@@ -1,5 +1,8 @@
-package com.hms.usermanagement;
+package com.hms.user.manage.rest;
 
+import com.hms.user.manage.domain.User;
+import com.hms.user.manage.repository.UserRepository;
+import com.hms.user.manage.repository.impl.UserRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,29 +12,28 @@ import java.util.List;
 public class UserManagementController {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository userRepositoryImpl;
 
     @GetMapping(value = "/user")
     public List<User> viewUsers() {
-
-        return userRepository.viewAllUsers();
+        return userRepositoryImpl.viewAllUsers();
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     public void createUser(@RequestBody User input) {
         User user = new User(input.getUserId(), input.getUserName(), input.getUserPassword());
-        userRepository.addUser(user);
+        userRepositoryImpl.addUser(user);
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.PUT)
     public void updateUser(@RequestBody User input) {
         User user = new User(input.getUserId(), input.getUserName(), input.getUserPassword());
-        userRepository.editUser(user);
+        userRepositoryImpl.editUser(user);
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.DELETE)
     public void deleteUser(@RequestBody User input) {
-        userRepository.deleteUser(input.getUserId());
+        userRepositoryImpl.deleteUser(input.getUserId());
     }
 }
 

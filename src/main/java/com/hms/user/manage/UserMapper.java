@@ -1,5 +1,6 @@
-package com.hms.usermanagement;
+package com.hms.user.manage;
 
+import com.hms.user.manage.domain.User;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

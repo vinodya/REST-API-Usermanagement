@@ -1,8 +1,10 @@
-package com.hms.usermanagement;
+package com.hms.user.manage.repository;
+
+import com.hms.user.manage.domain.User;
 
 import java.util.List;
 
-public interface UserDAO  {
+public interface UserRepository {
     void addUser(User user);
     void editUser(User user);
     void deleteUser(int userid);
