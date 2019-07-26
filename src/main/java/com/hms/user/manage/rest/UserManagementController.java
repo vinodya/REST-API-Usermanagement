@@ -2,7 +2,6 @@ package com.hms.user.manage.rest;
 
 import com.hms.user.manage.domain.User;
 import com.hms.user.manage.repository.UserRepository;
-import com.hms.user.manage.repository.impl.UserRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

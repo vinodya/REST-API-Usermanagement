@@ -2,6 +2,8 @@ package com.hms.user.manage.repository.impl;
 
 import com.hms.user.manage.domain.User;
 import com.hms.user.manage.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -13,6 +15,8 @@ import java.util.List;
 @Repository
 public class UserRepositoryImpl implements UserRepository {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserRepositoryImpl.class);
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -21,10 +25,10 @@ public class UserRepositoryImpl implements UserRepository {
         try {
             String sql = "INSERT INTO user (userid, username, userpassword) VALUES (?, ?, ?)";
             jdbcTemplate.update(sql, user.getUserId(), user.getUserName(), user.getUserPassword());
-            System.out.println("User " + user.getUserId() + " successfully inserted");
+            logger.info("User " + user.getUserId() + " successfully inserted");
         } catch (DataAccessException e) {
             e.printStackTrace();
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage());
         }
     }
 
@@ -33,10 +37,10 @@ public class UserRepositoryImpl implements UserRepository {
         try {
             String sql = "DELETE  FROM user WHERE userid=?";
             jdbcTemplate.update(sql, userid);
-            System.out.println("User id "+ userid +" successfully deleted");
+            logger.info("User "+ userid +" successfully deleted");
         } catch (DataAccessException e) {
             e.printStackTrace();
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage());
         }
     }
 
@@ -45,10 +49,11 @@ public class UserRepositoryImpl implements UserRepository {
         try {
             String sql = "SELECT * FROM user";
             List<User> user = jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(User.class));
+            logger.info("All users displayed");
             return user;
         } catch (DataAccessException e) {
             e.printStackTrace();
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage());
             return null;
         }
     }
@@ -58,10 +63,10 @@ public class UserRepositoryImpl implements UserRepository {
         try {
             String sql = "UPDATE user SET username=?, userpassword=? WHERE userid=?";
             jdbcTemplate.update(sql, user.getUserName(), user.getUserPassword(), user.getUserId());
-            System.out.println("User Id "+user.getUserId()+" password successfully updated");
+            logger.info("User "+user.getUserId()+" successfully updated");
         } catch (DataAccessException e) {
             e.printStackTrace();
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage());
         }
     }
 }
