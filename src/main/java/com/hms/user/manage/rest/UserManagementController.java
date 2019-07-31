@@ -30,9 +30,11 @@ public class UserManagementController {
         userRepositoryImpl.editUser(user);
     }
 
-    @RequestMapping(value = "/user", method = RequestMethod.DELETE)
-    public void deleteUser(@RequestBody User input) {
-        userRepositoryImpl.deleteUser(input.getUserId());
+    @GetMapping("/users")
+    public User findUser(@RequestParam(value = "userid", defaultValue = " ") int userId) {
+        return userRepositoryImpl.getUser(userId);
     }
+
+
 }
 

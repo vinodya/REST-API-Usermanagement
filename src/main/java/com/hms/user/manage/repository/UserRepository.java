@@ -1,80 +1,52 @@
 package com.hms.user.manage.repository;
 
 import com.hms.user.manage.domain.User;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Component
+/**
+ * UserRepository interface provides
+ * the abstract methods where the
+ * implementation of each provided
+ * in the UserRepositoryImpl class
+ *
+ * @version 1.8
+ * @author Vinodya Samarasinghe
+ */
 public interface UserRepository {
-    void addUser(User user);
+    /**
+     * addUser for the user insertion into the database
+     * using jdbcTemplate.update
+     * @param user userId, userName, userPassword for user
+     */
+    User addUser(User user);
+
+    /**
+     * editUser for updating the user in the database
+     * using jdbcTemplate.update
+     * @param user userId, userName, userPassword for user
+     */
     void editUser(User user);
-    void deleteUser(int userid);
+
+    /**
+     * deleteUser for deleting the user record in the
+     * database using jdbcTemplate.update
+     * @param userId unique user ID for user
+     */
+    void deleteUser(int userId);
+
+    /**
+     * viewAllUsers for viewing all the user records in the
+     * database using jdbcTemplate.query
+     */
     List<User> viewAllUsers();
+
+    /**
+     * getUser for finding particular user
+     * when given the userId using jdbcTemplate.update
+     */
+    User getUser(int userId);
 }
 
-@Repository
-class UserRepositoryImpl implements UserRepository {
-
-    private static final Logger logger = LoggerFactory.getLogger(UserRepositoryImpl.class);
-
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
-    @Override
-    public void addUser(User user) {
-        try {
-            String sql = "INSERT INTO user (userid, username, userpassword) VALUES (?, ?, ?)";
-            jdbcTemplate.update(sql, user.getUserId(), user.getUserName(), user.getUserPassword());
-            logger.info("User " + user.getUserId() + " successfully inserted");
-        } catch (DataAccessException e) {
-            e.printStackTrace();
-            logger.error(e.getMessage());
-        }
-    }
-
-    @Override
-    public void deleteUser(int userid) {
-        try {
-            String sql = "DELETE  FROM user WHERE userid=?";
-            jdbcTemplate.update(sql, userid);
-            logger.info("User "+ userid +" successfully deleted");
-        } catch (DataAccessException e) {
-            e.printStackTrace();
-            logger.error(e.getMessage());
-        }
-    }
-
-    @Override
-    public List<User> viewAllUsers() {
-        try {
-            String sql = "SELECT * FROM user";
-            List<User> user = jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(User.class));
-            logger.info("All users displayed");
-            return user;
-        } catch (DataAccessException e) {
-            e.printStackTrace();
-            logger.error(e.getMessage());
-            return null;
-        }
-    }
-
-    @Override
-    public void editUser(User user) {
-        try {
-            String sql = "UPDATE user SET username=?, userpassword=? WHERE userid=?";
-            jdbcTemplate.update(sql, user.getUserName(), user.getUserPassword(), user.getUserId());
-            logger.info("User "+user.getUserId()+" successfully updated");
-        } catch (DataAccessException e) {
-            e.printStackTrace();
-            logger.error(e.getMessage());
-        }
-    }
-}
