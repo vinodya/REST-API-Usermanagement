@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version 1.8
  * @author Vinodya Samarasinghe
  */
-@SpringBootApplication(scanBasePackages = { "com.hms.user.manage.domain", "com.hms.user.manage.rest","com.hms.user.manage.repository"})
+@SpringBootApplication(scanBasePackages = {"com.hms"})
 public class UsermanagementApplication {
 
 	/**

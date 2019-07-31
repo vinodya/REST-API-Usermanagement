@@ -1,6 +1,7 @@
-package com.hms.user.manage.repository;
+package com.hms.user.manage.repository.impl;
 
 import com.hms.user.manage.domain.User;
+import com.hms.user.manage.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,28 +17,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-/**
- * UserRepositoryImpl provides
- * implementation of each abstract
- * method mentioned in the UserRepository
- *
- * @version 1.8
- * @author Vinodya Samarasinghe
- */
 public class UserRepositoryImpl implements UserRepository {
+
     private static final Logger logger = LoggerFactory.getLogger(UserRepositoryImpl.class);
+
     @Autowired
-    /**
-     * All the methods addUser, editUser,
-     * deleteUser, viewAllUsers and getUser
-     * are performed using jdbc template
-     */
     private JdbcTemplate jdbcTemplate;
+
     @Override
-    /**
-     * addUser for the user insertion into the database
-     * @param user
-     */
     public User addUser(User user) {
         String sql = "INSERT INTO user (userid, username, userpassword) VALUES (?, ?, ?)";
         try {
