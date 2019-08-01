@@ -29,13 +29,13 @@ public class UserRepositoryImplTest {
 
     @Test
     public void testAddUser(){
-        User user = new User(12, "vino", "jhfubf983");
-        User user1 = userRepository.addUser(user);
-        User user2 = (User) jdbcTemplate.queryForObject("select * from user where userid =" +
+        User user = new User(1, "vino", "jhfubf983");
+        User newuser = userRepository.addUser(user);
+        User testuser = (User) jdbcTemplate.queryForObject("select * from user where userid =" +
                 user.getUserId(), BeanPropertyRowMapper.newInstance(User.class));
-        Assert.assertEquals(user1.getUserId(), user2.getUserId());
-        Assert.assertEquals(user1.getUserName(), user2.getUserName());
-        Assert.assertEquals(user1.getUserPassword(), user2.getUserPassword());
+        Assert.assertEquals(newuser.getUserId(), testuser.getUserId());
+        Assert.assertEquals(newuser.getUserName(), testuser.getUserName());
+        Assert.assertEquals(newuser.getUserPassword(), testuser.getUserPassword());
     }
 
     @Test
@@ -46,34 +46,38 @@ public class UserRepositoryImplTest {
         List<String> user = jdbcTemplate.queryForList(sql, String.class);
         if (user.isEmpty())
             user = null;
-        Assert.assertEquals(null, user);
+        Assert.assertNull(user);
     }
 
     @Test
     public void testViewAllUsers() {
-        List<User> user1 = userRepository.viewAllUsers();
-        List<User> user2 = jdbcTemplate.query("select * from user", new BeanPropertyRowMapper<User>(User.class));
-        Assert.assertEquals(user1.size(), user2.size());
+        List<User> newuser = userRepository.viewAllUsers();
+        List<User> testuser = jdbcTemplate.query("select * from user", new BeanPropertyRowMapper<User>(User.class));
+       for (int i=0; i<newuser.size(); i++){
+            Assert.assertEquals(newuser.get(i), testuser.get(i));
+        }
     }
 
     @Test
     public void testgetUser(){
         int userId = 4;
-        User user1 = userRepository.getUser(userId);
+        User newUser = userRepository.getUser(userId);
         String sql ="select * from user where userid =" + userId;
-        User user2 =(User) jdbcTemplate.queryForObject(sql, new UserMapper());
-        Assert.assertEquals(user1.getUserName(), user2.getUserName());
-        Assert.assertEquals(user1.getUserPassword(), user2.getUserPassword());
+        User testUser =(User) jdbcTemplate.queryForObject(sql, new UserMapper());
+        Assert.assertEquals(newUser.getUserName(), testUser.getUserName());
+        Assert.assertEquals(newUser.getUserPassword(), testUser.getUserPassword());
     }
 
     @Test
     public void testEditUser(){
-        User user =  new User(4, "vin", "ygevfh837");
-        userRepository.editUser(user);
-        String sql ="select * from user where userid =" + user.getUserId();
-        User user1 =(User) jdbcTemplate.queryForObject(sql, new UserMapper());
-        Assert.assertEquals(user.getUserName(), user1.getUserName());
-        Assert.assertEquals(user.getUserPassword(), user1.getUserPassword());
+        User user =  new User(8, "vin", "ygevfh837");
+        userRepository.addUser(user);
+        User updateUser = new User(11, "vin", "urhgyh847");
+        userRepository.editUser(updateUser);
+        String sql ="select * from user where userid =" + updateUser.getUserId();
+        User newUser =(User) jdbcTemplate.queryForObject(sql, new UserMapper());
+        Assert.assertEquals(updateUser.getUserName(), newUser.getUserName());
+        Assert.assertEquals(updateUser.getUserPassword(), newUser.getUserPassword());
     }
 
 

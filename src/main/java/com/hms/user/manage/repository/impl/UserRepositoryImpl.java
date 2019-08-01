@@ -33,11 +33,9 @@ public class UserRepositoryImpl implements UserRepository {
                 logger.info("User {} successfully inserted", user.getUserId());
                 return user;
             } else {
-                logger.info("Userid exist, please enter the correct userid");
-                return null;
+                throw new RuntimeException("Userid exist, please enter the correct userid");
             }
         } catch (DataAccessException e) {
-            e.printStackTrace();
             logger.error("Error occurred while adding user", e);
             return null;
         }
@@ -51,10 +49,9 @@ public class UserRepositoryImpl implements UserRepository {
                 jdbcTemplate.update(sql, userId);
                 logger.info("User {} successfully deleted", userId);
             } else {
-                logger.info("No such userid exist");
+                throw new RuntimeException("No such userid exist");
             }
         } catch (DataAccessException e) {
-            e.printStackTrace();
             logger.error("Error occurred while deleting the user", e);
         }
     }
@@ -78,8 +75,7 @@ public class UserRepositoryImpl implements UserRepository {
                 public List<User> extractData(ResultSet resultSet) throws SQLException, DataAccessException {
                     List<User> list = new ArrayList<User>();
                     if (!resultSet.next()) {
-                        logger.info("No user found");
-                        return null;
+                        throw new RuntimeException("No such userid exist");
                     } else {
                         do{
                             User user = new User();
@@ -95,7 +91,6 @@ public class UserRepositoryImpl implements UserRepository {
             });
             return user;
         } catch (DataAccessException e) {
-            e.printStackTrace();
             logger.error("Error occurred while viewing the user", e);
             return null;
         }
@@ -109,11 +104,9 @@ public class UserRepositoryImpl implements UserRepository {
                 logger.info("User {} details found", userId);
                 return user;
             } else {
-                logger.info("No such userid exist");
-                return null;
+                throw new RuntimeException("No such userid exist");
             }
         } catch (DataAccessException e) {
-            e.printStackTrace();
             logger.error("Error occurred while finding the user", e);
             return  null;
         }
@@ -126,10 +119,9 @@ public class UserRepositoryImpl implements UserRepository {
                 jdbcTemplate.update(sql, user.getUserName(), user.getUserPassword(), user.getUserId());
                 logger.info("User {} successfully updated", user.getUserId());
             } else {
-                logger.info("No such userid exist");
+                throw new RuntimeException("User not present");
             }
         } catch (DataAccessException e) {
-            e.printStackTrace();
             logger.error("Error occurred while updating the user", e);
         }
     }
