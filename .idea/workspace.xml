@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbc13226-2084-417f-a739-0ffa0a1e49ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_7_0_0_beta7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LOGS_IS_UNDEFINED/hms/logs/usermanagement/spring-boot-logger-debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/LOGS_IS_UNDEFINED/hms/logs/usermanagement/spring-boot-logger-debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LOGS_IS_UNDEFINED/hms/logs/usermanagement/spring-boot-logger-info.log" beforeDir="false" afterPath="$PROJECT_DIR$/LOGS_IS_UNDEFINED/hms/logs/usermanagement/spring-boot-logger-info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hms/user/manage/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hms/user/manage/repository/impl/UserRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/hms/user/manage/repository/impl/UserRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hms/user/manage/repository/impl/UserRepositoryImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermanagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/usermanagement.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+            <state relative-caret-position="206">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -53,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hms/user/manage/repository/impl/UserRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1093">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="-313">
+              <caret line="76" column="44" lean-forward="true" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2864#2870#0" expanded="true" />
@@ -66,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/hms/user/manage/repository/impl/UserRepositoryImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+            <state relative-caret-position="257">
+              <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,7 +105,7 @@
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.1.0.RELEASE/spring-jdbc-4.1.0.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="228" column="8" lean-forward="true" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="8" />
+              <caret line="228" column="8" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -174,7 +188,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hms/user/manage/UserMapper.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hms/user/manage/repository/UserRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/hms/user/manage/repository/UserRepositoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hms/user/manage/rest/UserManagementController.java" />
@@ -184,8 +197,9 @@
         <option value="$PROJECT_DIR$/src/test/java/com/hms/user/manage/UserRepositoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hms/user/manage/domain/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hms/user/manage/boot/UsermanagementApplication.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/hms/user/manage/repository/impl/UserRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hms/user/manage/repository/impl/UserRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/hms/user/manage/repository/impl/UserRepositoryImplTest.java" />
       </list>
     </option>
   </component>
@@ -442,7 +456,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryImplTest.testEditUser">
+  <component name="RunManager" selected="JUnit.UserRepositoryImplTest.testgetUser (1)">
     <configuration name="All in usermanagement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="usermanagement" />
       <extension name="coverage">
@@ -467,22 +481,6 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryImplTest.testAddUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="usermanagement" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hms.user.manage.repository.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hms.user.manage.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.hms.user.manage.repository.impl.UserRepositoryImplTest" />
-      <option name="METHOD_NAME" value="testAddUser" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -514,6 +512,22 @@
       <option name="PACKAGE_NAME" value="com.hms.user.manage.repository.impl" />
       <option name="MAIN_CLASS_NAME" value="com.hms.user.manage.repository.impl.UserRepositoryImplTest" />
       <option name="METHOD_NAME" value="testViewAllUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryImplTest.testgetUser (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="usermanagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hms.user.manage.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hms.user.manage.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.hms.user.manage.repository.impl.UserRepositoryImplTest" />
+      <option name="METHOD_NAME" value="testgetUser(int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -556,19 +570,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Unnamed" />
-      <item itemvalue="JUnit.UserRepositoryImplTest.testViewAllUsers" />
-      <item itemvalue="JUnit.UserRepositoryImplTest.testgetUser" />
       <item itemvalue="JUnit.All in usermanagement" />
-      <item itemvalue="TestNG.UsermanagementApplicationTests" />
       <item itemvalue="JUnit.UserRepositoryImplTest.testEditUser" />
-      <item itemvalue="JUnit.UserRepositoryImplTest.testAddUser" />
+      <item itemvalue="JUnit.UserRepositoryImplTest.testgetUser" />
+      <item itemvalue="TestNG.UsermanagementApplicationTests" />
+      <item itemvalue="JUnit.UserRepositoryImplTest.testViewAllUsers" />
+      <item itemvalue="JUnit.UserRepositoryImplTest.testgetUser (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserRepositoryImplTest.testEditUser" />
-        <item itemvalue="JUnit.UserRepositoryImplTest.testAddUser" />
-        <item itemvalue="JUnit.All in usermanagement" />
+        <item itemvalue="JUnit.UserRepositoryImplTest.testgetUser (1)" />
         <item itemvalue="JUnit.UserRepositoryImplTest.testViewAllUsers" />
+        <item itemvalue="JUnit.All in usermanagement" />
+        <item itemvalue="JUnit.UserRepositoryImplTest.testEditUser" />
         <item itemvalue="JUnit.UserRepositoryImplTest.testgetUser" />
       </list>
     </recent_temporary>
@@ -587,42 +601,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserRepositoryImplTest_testViewAllUsers - 2019.08.01 at 10h 43m 21s.xml">
+    <history-entry file="UserRepositoryImplTest_testViewAllUsers - 2019.08.01 at 15h 42m 33s.xml">
       <configuration name="UserRepositoryImplTest.testViewAllUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryImplTest_testViewAllUsers - 2019.08.01 at 10h 45m 03s.xml">
+    <history-entry file="UserRepositoryImplTest_testViewAllUsers - 2019.08.01 at 15h 44m 28s.xml">
       <configuration name="UserRepositoryImplTest.testViewAllUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryImplTest_testEditUser - 2019.08.01 at 11h 19m 55s.xml">
-      <configuration name="UserRepositoryImplTest.testEditUser" configurationId="JUnit" />
+    <history-entry file="UserRepositoryImplTest_testViewAllUsers - 2019.08.01 at 15h 48m 09s.xml">
+      <configuration name="UserRepositoryImplTest.testViewAllUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryImplTest_testEditUser - 2019.08.01 at 11h 22m 24s.xml">
-      <configuration name="UserRepositoryImplTest.testEditUser" configurationId="JUnit" />
+    <history-entry file="UserRepositoryImplTest_testViewAllUsers - 2019.08.01 at 15h 48m 36s.xml">
+      <configuration name="UserRepositoryImplTest.testViewAllUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryImplTest_testEditUser - 2019.08.01 at 11h 23m 52s.xml">
-      <configuration name="UserRepositoryImplTest.testEditUser" configurationId="JUnit" />
+    <history-entry file="UserRepositoryImplTest_testViewAllUsers - 2019.08.01 at 15h 52m 03s.xml">
+      <configuration name="UserRepositoryImplTest.testViewAllUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryImplTest_testEditUser - 2019.08.01 at 11h 24m 09s.xml">
-      <configuration name="UserRepositoryImplTest.testEditUser" configurationId="JUnit" />
+    <history-entry file="UserRepositoryImplTest_testgetUser_(1) - 2019.08.01 at 15h 58m 05s.xml">
+      <configuration name="UserRepositoryImplTest.testgetUser (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryImplTest_testEditUser - 2019.08.01 at 11h 27m 02s.xml">
-      <configuration name="UserRepositoryImplTest.testEditUser" configurationId="JUnit" />
+    <history-entry file="UserRepositoryImplTest_testgetUser_(1) - 2019.08.01 at 15h 58m 35s.xml">
+      <configuration name="UserRepositoryImplTest.testgetUser (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryImplTest_testAddUser - 2019.08.01 at 11h 33m 14s.xml">
-      <configuration name="UserRepositoryImplTest.testAddUser" configurationId="JUnit" />
+    <history-entry file="UserRepositoryImplTest_testgetUser_(1) - 2019.08.01 at 15h 59m 08s.xml">
+      <configuration name="UserRepositoryImplTest.testgetUser (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryImplTest_testAddUser - 2019.08.01 at 11h 33m 48s.xml">
-      <configuration name="UserRepositoryImplTest.testAddUser" configurationId="JUnit" />
+    <history-entry file="UserRepositoryImplTest_testgetUser_(1) - 2019.08.01 at 16h 04m 17s.xml">
+      <configuration name="UserRepositoryImplTest.testgetUser (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRepositoryImplTest_testEditUser - 2019.08.01 at 11h 35m 25s.xml">
-      <configuration name="UserRepositoryImplTest.testEditUser" configurationId="JUnit" />
+    <history-entry file="UserRepositoryImplTest_testgetUser_(1) - 2019.08.01 at 16h 10m 03s.xml">
+      <configuration name="UserRepositoryImplTest.testgetUser (1)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1992032" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27888447" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -631,7 +645,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32763976" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35714287" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35714287" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.40527952" />
@@ -777,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hms/user/manage/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -816,7 +823,7 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.1.0.RELEASE/spring-jdbc-4.1.0.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="228" column="8" lean-forward="true" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="8" />
+          <caret line="228" column="8" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -837,23 +844,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/hms/user/manage/repository/impl/UserRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="206">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hms/user/manage/repository/impl/UserRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1093">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="-313">
+          <caret line="76" column="44" lean-forward="true" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2864#2870#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/hms/user/manage/repository/impl/UserRepositoryImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

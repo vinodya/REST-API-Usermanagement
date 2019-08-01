@@ -83,7 +83,7 @@ public class UserRepositoryImpl implements UserRepository {
                             user.setUserName(resultSet.getString("username"));
                             user.setUserPassword(resultSet.getString("userpassword"));
                             list.add(user);
-                        }while (resultSet.next());
+                        } while (resultSet.next());
                         logger.info("All users displayed");
                         return list;
                     }
